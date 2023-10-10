@@ -1,0 +1,158 @@
+\documentclass{hmLab}
+
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\include{ColorDefinitions}
+\include{listing-style}
+
+
+\course{Computational Thinking}
+\semester{WS2023/24}
+\labno{2}
+\subtitle{Kontrollstrukturen mit dem micro:bit}
+\author{Prof.\,Dr.-Ing.\,Martin Hobelsberger\\Dr.\,Benedikt Zönnchen\\Prof.\,Dr.-Ing.\,Benedikt Dietrich}
+
+\begin{document}
+\maketitle
+
+\section*{Lernziel}
+
+In dieser ersten praktischen Übung konzentrieren wir uns aufs Denken.
+Nach diesem Praktikum sollten Sie die Fähigkeiten haben:
+
+\begin{enumerate}[label=$\bullet$]
+	\item einfache Problemstellungen zu analysieren, diese zu verstehen und in (kleinste) Teilprobleme untergliedern/strukturieren können 
+	\item für Teilprobleme eine abstrakte Lösung zu überlegen und diese in eigenen Worten niederzuschreiben 
+	\item einfache logischen Einheiten der Programmierung (z.B. Schleifen und Variablen) nachvollziehen zu können und diese auf eine abstrakte Lösung anzuwenden
+\end{enumerate}
+
+\section*{Voraussetzungen}
+
+Wir verwenden das \textit{micro:bit} (einen sog. Einplatinencomputer), welches unsere Algorithmen ausführt.
+Sie können die Algorithmen auch ohne das \textit{micro:bit} entwickeln und testen, doch wollen wir diese dann auch auf dem \textit{micro:bit} ausführen um diesen Computer zu steuern.
+Im Praktikum erhalten Sie ein \textit{micro:bit} pro Gruppe.
+Testen Sie alle Lösungen auf Ihrem \textit{micro:bit}!
+
+\newpage
+
+\excercise{Einführung und Tutorial}
+
+Bevor Sie mit der abzugebenden Aufgabe beginnen sollten Sie sich mit der Entwicklungsumgebung vertraut machen. 
+Gehen Sie hierzu wie folgt vor:
+
+\begin{enumerate}[label=(\arabic*)]
+	\item Lesen Sie sich folgende Anleitung durch: \href{http://microbit.org/de/guide/quick/}{http://microbit.org/de/guide/quick/}
+	\item Folgen Sie zum Lösen der Aufgeben den notwendigen Schritten (unter Verwendung der Umgebung unter: \href{https://makecode.microbit.org/}{https://makecode.microbit.org/})
+\end{enumerate}
+%
+Versuchen Sie nun verschiedene kleine Aufgaben zu lösen.
+Verwenden Sie hier logische Einheiten aus den Reitern Grundlagen und Eingabe:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.3\textwidth]{basics-input}
+\end{figure}
+
+\begin{enumerate}[label=$\bullet$]
+	\item Geben Sie ``Hallo Welt!'' oder Ihren Namen auf dem Display (LED-Matrix) aus.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.6\textwidth]{hello-world}
+	\end{figure}
+	\item Zeichnen Sie, auf Knopfdruck (A oder B) kleine Bilder auf den Bildschirm 
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{a-or-b}
+	\end{figure}
+	\item Zeigen Sie nach Start eine Zahl an und löschen Sie diese nach der Anzeige wieder.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{show-number}
+	\end{figure}
+	\item Überlegen Sie sich mit Ihrem Gruppenpartner eigene kleine Aufgaben die Sie sich gegenseitig stellen! Fordern Sie sich gegenseitig heraus!
+\end{enumerate}
+
+\excercise{Schleifen: X}
+
+Implementieren Sie einen Algorithmus um durch drücken der \textbf{Taste\,A} und der \textbf{Taste\,B} ein X auf den Bildschirm zu zeichnen.\\
+
+\noindent In dieser Aufgabe lernen Sie die Grundzüge der Verwendung von Schleifen (Befehle mehrmals ausführen) und Variablen (Daten zwischenspeichern).
+Am Ende dieser Aufgabe haben Sie ein Programm entwickelt das folgende Funktion erfüllt:
+%
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{microbit-X}
+\end{figure}
+%
+Verwenden Sie hierzu \textbf{NUR} logische Elemente aus der Kategorie:
+%
+\begin{enumerate}[label=$\bullet$]
+	\item Eingabe 
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.2\textwidth]{input}
+	\end{figure}
+	\item LED
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.2\textwidth]{led}
+	\end{figure}
+	\item Schleifen
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.2\textwidth]{loop}
+	\end{figure}
+	\item Variablen
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.21\textwidth]{variables}
+	\end{figure}
+\end{enumerate}
+
+Gehen Sie dazu wie folgt vor:
+\begin{enumerate}[label=\arabic*.]
+	\item Versuchen Sie das Problem in Teilprobleme zu zerlegen. Überlegen Sie sich, z.\,B., zuerst den Algorithmus für \textbf{Taste\,A} und dann für \textbf{Taste\,B}.
+	Wie würden Sie vorgehen, wenn Sie auf einem Blatt Papier die einzelnen LEDs ($5 \times 5$ an der Zahl) im vorgegebenen Muster ausmalen müssten? 
+	Schreiben Sie die einzelnen Schritte auf!\\\\\textbf{Tipp}: Die \textbf{LEDs} sind in einer Matrix ($x$- und $y$-Koordinaten) angeordnet und können auch so bedient werden: 
+	Die \textbf{LED} in der linken oberen Ecke ist mit den Koordinaten $(0,0)$ also $x$ entspricht 0 und $y$ entspricht 0 beschrieben.
+	Die \textbf{LED} in der rechten unteren Ecke hat die Koordinaten $(4,4)$.
+	\item Machen Sie sich mit den einzelnen logischen Elementen in den Kategorien vertraut! Versuchen Sie für jedes einzelne Element ein kleines Programm zu erstellen um die Funktion kennen zu lernen. 
+	\item Wählen Sie die logischen Elemente aus welche Sie für Ihre Lösung am geeignetsten halten und versuchen Sie das Programm in Teilschritten zu erstellen. Nutzen Sie immer wieder den Simulator um Ihr Programm zu überprüfen! 
+\end{enumerate}
+
+\excercise{Treppenbau}
+
+Zeichnen Sie, durch mehrmaliges drücken von \textbf{Taste A}, eine Treppe wie diese in folgender Abbildung dargestellt wird.
+%
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{stairs}
+\end{figure}
+%
+Auch hier verwenden Sie \textbf{NUR} wieder die logischen Elemente aus Eingabe, LED, Schleifen und Variablen. 
+
+\excercise{Treppenbau}
+
+Und noch etwas kniffliger. Zeichnen Sie, durch mehrmaliges drücken von \textbf{Taste B}, eine Treppe mit einem Absatz! 
+%
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{stairs-with-floor}
+\end{figure}
+%
+Auch hier verwenden Sie \textbf{NUR} wieder die logischen Elemente aus Eingabe, LED, Schleifen, Variablen und \textbf{ZUSÄTZLICH} aus der Kategorie Logik
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.2\textwidth]{logic}
+\end{figure}
+
+
+\section*{Weiterführende Informationen}
+
+\begin{enumerate}[label=$\bullet$]
+	\item \href{http://microbit.org/de/ideas/}{http://microbit.org/de/ideas/}
+	\item \href{https://makecode.com/\#get-inspired}{https://makecode.com/\#get-inspired}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,94 @@
+\usepackage{courier}
+
+\lstset{basicstyle=\footnotesize\ttfamily}
+%\lstset{framextopmargin=50pt,frame=bottomline}
+
+\lstdefinestyle{ipython}{
+	commentstyle=\color{ipython_cyan}\ttfamily,
+	stringstyle=\color{ipython_red}\ttfamily,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+	%
+	rulecolor=\color{ipython_frame},
+	frame=single,
+	frameround={t}{t}{t}{t},
+	framexleftmargin=6mm,
+	numbers=left,
+	numberstyle=\tiny\color{halfgray},
+	%
+	%
+	backgroundcolor=\color{ipython_bg},
+	%   extendedchars=true,
+	basicstyle=\scriptsize\ttfamily\scriptsize,
+	keywordstyle=\color{ipython_green}\bfseries,
+	%backgroundcolor=\color{backcolour},   
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                            
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstdefinelanguage{opencl}
+{morekeywords={const,double,int,if,get_global_id,unsigned,__kernel,kernel,__local,local,__global,global,% 
+		__constant,constant,__private,private,% 
+		char2,char3,char4,char8,char16,% 
+		uchar2,uchar3,uchar4,uchar8,uchar16,% 
+		short2,short3,short4,short8,short16,% 
+		ushort2,ushort3,ushort4,ushort8,ushort16,% 
+		int2,int3,int4,int8,int16,% 
+		uint2,uint3,uint4,uint8,uint16,% 
+		long2,long3,long4,long8,long16,% 
+		ulong2,ulong3,ulong4,ulong8,ulong16,% 
+		float2,float3,float4,float8,float16,% 
+		image2d_t,image3d_t,sampler_t,event_t,% 
+		bool2,bool3,bool4,bool8,bool16,% 
+		half2,half3,half4,half8,half16,% 
+		quad,quad2,quad3,quad4,quad8,quad16,% 
+		complex,imaginary},% 
+}% 
+
+\lstdefinestyle{mystyle}{
+	%backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize\scriptsize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{pink}{RGB}{201, 28, 164}
+\lstdefinelanguage{p5js}{
+	keywords={constructor, console, log, class, export, boolean, throw, implements, import, this, let,var,break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]',
+	morestring=[b]",
+	ndkeywords={setup, push, pop, rotate, scale, translate, draw, width, height, createCanvas, background, stroke, fill, rect, line,curve,random},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywordstyle=\color{pink}\bfseries,
+	identifierstyle=\color{black},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{ipython_red}\ttfamily,
+	sensitive=true
+}
+
+\lstset{style=ipython}
