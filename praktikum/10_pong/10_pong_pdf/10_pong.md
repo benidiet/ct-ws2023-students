@@ -112,7 +112,7 @@ Die Einheit von `delta_t` ist Millisekunden.
 \task Berechnen Sie die aktuelle Position des Balls auf Basis der aktuellen Geschwindigkeit (`ball_speed_x` und `ball_speed_y`), der vergangenen Zeit `delta_t` und der aktuellen Position (`ball_position_x` und `ball_position_y`). 
 Sie finden hierzu einige Informationen in den Vorlesungsfolien.
 
-\warning Die Einheit von `ball_position_x` und `ball_position_y` ist Pixel pro Sekunde. Die Einheit von `delta_t` ist Millisekunden. Die Einheit von `ball_position_x` und `ball_position_y` ist Pixel.
+\warning Die Einheit von `ball_speed_x` und `ball_speed_y` ist Pixel pro Sekunde. Die Einheit von `delta_t` ist Millisekunden. Die Einheit von `ball_position_x` und `ball_position_y` ist Pixel.
 
 Der Ball sollte sich nun nach wie vor im Fenster bewegen und an den Fensterrändern abprallen.
 Der Unterschied ist, dass die Geschwindigkeit in der Einheit Pixel pro Sekunde angegeben wird und nicht mehr in Pixel pro Frame.
